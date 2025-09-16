@@ -35,7 +35,9 @@ global-context-less-secure = ["global-context"]
 arbitrary = ["dep:arbitrary"]
 
 [dependencies]
-secp256k1-sys = { version = "0.11.0", default-features = false, path = "./secp256k1-sys" }
+#secp256k1-sys = { version = "0.11.0", default-features = false, path = "./secp256k1-sys" }
+secp256k1-sys = {  git = "https://github.com/philipr-za/rust-secp256k1.git", branch = "philip-explicit-sys-dep", default-features = false }
+
 
 arbitrary = { version = "1.4", optional = true }
 rand = { version = "0.9", default-features = false, optional = true }
